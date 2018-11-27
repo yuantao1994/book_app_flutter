@@ -1,3 +1,5 @@
+import 'package:book_app/book/bookDetails.dart';
+
 import 'tabs/bookLib.dart';
 import 'tabs/my.dart';
 import 'tabs/myBook.dart';
@@ -7,6 +9,9 @@ import 'package:flutter/cupertino.dart';
 
 void main() => runApp(MaterialApp(
       home: LayoutTab(),
+      routes: <String, WidgetBuilder>{
+        '/bookDetails': (BuildContext context) => BookDetails(null),
+      },
     ));
 
 class LayoutTab extends StatefulWidget {

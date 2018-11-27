@@ -1,3 +1,4 @@
+import 'package:book_app/book/bookDetails.dart';
 import 'package:book_app/model/bookInfo.dart';
 import 'package:flutter/material.dart';
 
@@ -48,6 +49,19 @@ class BookListItem extends StatelessWidget {
               )
             ],
           ),
+          onTap: () {
+            Navigator.push(context,
+                new MaterialPageRoute(builder: (BuildContext context) {
+              return new BookDetails(_book);
+            }));
+          },
         ));
+  }
+
+  goDetials(BuildContext context) {
+    Navigator.push(context,
+        MaterialPageRoute<void>(builder: (BuildContext context) {
+      return new BookDetails(this._book);
+    }));
   }
 }

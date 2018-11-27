@@ -45,6 +45,8 @@ class BookPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(body: new BooksList(_buildContactList()));
+    return new Scaffold(
+      body: new BooksList(_buildContactList()),
+    );
   }
 }
